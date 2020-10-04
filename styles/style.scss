@@ -1,0 +1,140 @@
+ /************************************
+  QuestBook by Christian Smith Mantas.
+
+   Alert Banner Models by Christian Smith Mantas.
+
+   Alert Banner Models
+   Created: 04-10-2020
+   Last Updated: 04-10-2020
+
+   Personal and comercial use under CCA 3.0 License.
+ */
+
+
+/* External or Web imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* Variable colour declarations */
+
+$successMain: #3fa234;
+$successSecondary: #a6dca8;
+$successTertiary: #b1dfb2;
+
+$infoMain: #4884ee;
+$infoSecondary: #a5c9ea;
+$infoTertiary: #b4d0ef;
+
+$warningMain: #e0a224;
+$warningSecondary: #dcd1a2;
+$warningTertiary: #ded7af;
+
+$errorMain: #c93541;
+$errorSecondary: #dea2a4;
+$errorTertiary: #dfabaf;
+
+/* Other variable delacrations */
+
+$borderRadius: .5rem;
+
+$shadow: 2px 2px 5px 2px rgba(0,0,0,0.25);
+$textShadow: 2px 2px 5px black;
+
+$globalFont: 'Secular One', sans-serif;
+
+
+/* Mixin function declarations */
+
+@mixin alertType($iconBackgroud, $titleBackgroud, $messageBackground) {
+    color: $iconBackgroud;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    .iconContainer {
+        grid-area: icon;
+        text-align: center;
+        font-size: 1.75rem;
+
+        color: white;
+        background-color: $iconBackgroud;
+
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+
+        ion-icon {
+            margin-top: .3rem;
+
+            text-shadow: $textShadow;
+        }
+    }
+
+    .titleContainer {
+        grid-area: title;
+
+        background-color: $titleBackgroud;
+
+        border-top-right-radius: $borderRadius;
+        border-bottom: 1px solid $iconBackgroud;
+
+        font-weight: 600;
+    }
+
+    .messageContainer {
+        grid-area: message;
+
+        background-color: $messageBackground;
+
+        border-bottom-right-radius: $borderRadius;
+    }
+}
+
+
+/* Global class style delarations */
+
+.alertBanner {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-template-areas: "icon title title" "icon message message" "icon message message";
+
+    height: 5rem;
+    width: 20rem;
+
+    font-family: $globalFont;
+
+    box-shadow: $shadow;
+
+    border-radius: $borderRadius;
+
+    .alertText {
+        margin-left: .5rem;
+        position: relative;
+        top: 30%;
+
+        span {
+            margin-right: 1rem;
+            float: right;
+        }
+    }
+
+    &.success {
+        @include alertType($successMain, $successSecondary, $successTertiary);
+    }
+
+    &.info {
+        @include alertType($infoMain, $infoSecondary, $infoTertiary);
+    }
+
+    &.warning {
+        @include alertType($warningMain, $warningSecondary, $warningTertiary);
+    }
+
+    &.error {
+        @include alertType($errorMain, $errorSecondary, $errorTertiary);
+    }
+
+    &:hover {
+        opacity: .80;
+        cursor: pointer;
+    }
+}

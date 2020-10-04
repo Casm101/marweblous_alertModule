@@ -1,0 +1,163 @@
+/************************************
+ QuestBook by Christian Smith Mantas.
+
+  Alert Banner Models by Christian Smith Mantas.
+
+  Alert Banner Models
+  Created: 04-10-2020
+  Last Updated: 04-10-2020
+
+  Personal and comercial use under CCA 3.0 License.
+*/
+/* External or Web imports */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+/* Variable colour declarations */
+/* Other variable delacrations */
+/* Mixin function declarations */
+/* Global class style delarations */
+.alertBanner {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 1fr;
+  grid-template-areas: "icon title title" "icon message message" "icon message message";
+  height: 5rem;
+  width: 20rem;
+  font-family: "Secular One", sans-serif;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+}
+.alertBanner .alertText {
+  margin-left: 0.5rem;
+  position: relative;
+  top: 30%;
+}
+.alertBanner .alertText span {
+  margin-right: 1rem;
+  float: right;
+}
+.alertBanner.success {
+  color: #3fa234;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.alertBanner.success .iconContainer {
+  grid-area: icon;
+  text-align: center;
+  font-size: 1.75rem;
+  color: white;
+  background-color: #3fa234;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.alertBanner.success .iconContainer ion-icon {
+  margin-top: 0.3rem;
+  text-shadow: 2px 2px 5px black;
+}
+.alertBanner.success .titleContainer {
+  grid-area: title;
+  background-color: #a6dca8;
+  border-top-right-radius: 0.5rem;
+  border-bottom: 1px solid #3fa234;
+  font-weight: 600;
+}
+.alertBanner.success .messageContainer {
+  grid-area: message;
+  background-color: #b1dfb2;
+  border-bottom-right-radius: 0.5rem;
+}
+.alertBanner.info {
+  color: #4884ee;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.alertBanner.info .iconContainer {
+  grid-area: icon;
+  text-align: center;
+  font-size: 1.75rem;
+  color: white;
+  background-color: #4884ee;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.alertBanner.info .iconContainer ion-icon {
+  margin-top: 0.3rem;
+  text-shadow: 2px 2px 5px black;
+}
+.alertBanner.info .titleContainer {
+  grid-area: title;
+  background-color: #a5c9ea;
+  border-top-right-radius: 0.5rem;
+  border-bottom: 1px solid #4884ee;
+  font-weight: 600;
+}
+.alertBanner.info .messageContainer {
+  grid-area: message;
+  background-color: #b4d0ef;
+  border-bottom-right-radius: 0.5rem;
+}
+.alertBanner.warning {
+  color: #e0a224;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.alertBanner.warning .iconContainer {
+  grid-area: icon;
+  text-align: center;
+  font-size: 1.75rem;
+  color: white;
+  background-color: #e0a224;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.alertBanner.warning .iconContainer ion-icon {
+  margin-top: 0.3rem;
+  text-shadow: 2px 2px 5px black;
+}
+.alertBanner.warning .titleContainer {
+  grid-area: title;
+  background-color: #dcd1a2;
+  border-top-right-radius: 0.5rem;
+  border-bottom: 1px solid #e0a224;
+  font-weight: 600;
+}
+.alertBanner.warning .messageContainer {
+  grid-area: message;
+  background-color: #ded7af;
+  border-bottom-right-radius: 0.5rem;
+}
+.alertBanner.error {
+  color: #c93541;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.alertBanner.error .iconContainer {
+  grid-area: icon;
+  text-align: center;
+  font-size: 1.75rem;
+  color: white;
+  background-color: #c93541;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.alertBanner.error .iconContainer ion-icon {
+  margin-top: 0.3rem;
+  text-shadow: 2px 2px 5px black;
+}
+.alertBanner.error .titleContainer {
+  grid-area: title;
+  background-color: #dea2a4;
+  border-top-right-radius: 0.5rem;
+  border-bottom: 1px solid #c93541;
+  font-weight: 600;
+}
+.alertBanner.error .messageContainer {
+  grid-area: message;
+  background-color: #dfabaf;
+  border-bottom-right-radius: 0.5rem;
+}
+.alertBanner:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
